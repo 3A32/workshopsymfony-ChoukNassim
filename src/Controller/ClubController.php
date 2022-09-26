@@ -37,8 +37,10 @@ class ClubController extends AbstractController
      }
      #[Route('/participer', name: 'reservation_formation')]
 
-     public function reservation()
-     {
-         return new Response("nouvelle page");
-      }
+    public function reservation()
+    {
+        return new Response("nouvelle page");
+     }
+
+ 
 }
