@@ -1,0 +1,34 @@
+
+<h1>La liste des formations</h1> de la classe
+ {{ x }} dans la salle  {{ y }}
+{% if tabFormation is empty %}
+<h1>Pas de formation</h1>
+{% else %}
+<table border="1">
+ <tr>
+  <td>Ref</td>
+  <td>Titre</td>
+  <td>Description</td>
+  <td>Nb_P</td>
+  <td>Participer</td>
+ </tr>
+{% for i in tabFormation %}
+ 
+ <tr>
+  <td>{{ i.ref }}</td>
+  <td>{{ i.Titre|upper }}</td>
+  <td>{{ i.Description }}</td>
+  <td>{{ i.nb_participants }}</td>
+  <td>
+   
+   <a href="{{ path('reservation_formation') }}">Participer</a>
+  
+  
+  
+  </td>
+ </tr>
+ 
+
+{% endfor %}
+</table>
+{% endif %}
